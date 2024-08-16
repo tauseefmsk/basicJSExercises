@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input>Please Enter text:</input>
+    <p id="result"></p>
+</body>
+<script>
+let addTwoNumbers = function() {
+    let num1 = prompt(`Enter Number 1:`);
+    let num2 = prompt(`Enter Number 2:`);
+    
+    // Convert the input values from strings to numbers
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    
+    // Check if the conversion to numbers was successful
+    if (!isNaN(num1) && !isNaN(num2)) {
+        return `Sum is ${num1 + num2}`;
+    } else {
+        return `Please enter valid numbers.`;
+    }
+};
+
+// Get the result from the function and display it in the <p> element
+document.getElementById('result').textContent = addTwoNumbers();
+</script>
+</html>
